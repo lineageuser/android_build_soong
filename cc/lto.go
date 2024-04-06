@@ -118,7 +118,6 @@ func (lto *lto) flags(ctx ModuleContext, flags Flags) Flags {
 			ltoLdFlags = append(ltoLdFlags,"-Wl,--lto-O3")
 			ltoCOnlyFlags = append(ltoCOnlyFlags, "-O3")
 		}
-
 		// Enable Polly globally
 		ltoCOnlyFlags = append(ltoCOnlyFlags, "-mllvm -polly")
 		ltoCOnlyFlags = append(ltoCOnlyFlags, "-mllvm -polly-parallel")
